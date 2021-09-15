@@ -31,6 +31,11 @@ public class EmployeeController {
 	@Autowired
 	private SequenceGeneratorService sequenceGeneratorService;
 	
+	@GetMapping("/dashboard")
+	public String getDashboard() {
+		return "Welcome to GIAM";
+	}
+	
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
 		return employeeRepository.findAll();
